@@ -33,7 +33,9 @@ import {
   getPosts,
 } from "../../../src/lib/posts-artiste/artiste-config";
 
-export async function ArtistPage({ params }: PostParams): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PostParams): Promise<Metadata> {
   const post = await getCurrentPost(params.slug);
 
   if (!post) {

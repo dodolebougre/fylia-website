@@ -25,7 +25,9 @@ import {
 } from "../../../../src/lib/posts/blogs-config";
 import { calculateReadingTime } from "../../../../src/lib/posts/calculate-reading-time";
 
-export async function BlogPage({ params }: PostParams): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PostParams): Promise<Metadata> {
   const post = await getCurrentPost(params.slug);
 
   if (!post) {
