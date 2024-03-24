@@ -26,7 +26,7 @@ const philosopher = Philosopher({
 });
 
 export const metadata: Metadata = {
-  title: SiteConfig.title,
+  title: "Fylia",
   description: SiteConfig.description,
 };
 
