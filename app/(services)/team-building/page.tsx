@@ -32,11 +32,11 @@ const ServiceTeamBuildingPage = () => {
           " Nos artistes locaux vous aident à créer une atmosphère de bien-être au travail."
         }
         buttonHero={"Devis sur mesure ☞"}
-        hrefButtonHero={""}
+        hrefButtonHero={"/devis"}
         typeWriter1={"votre équipe"}
         typeWriter2={"votre bien être"}
         typeWriter3={"vous ☞"}
-        hrefSwapLink={"/devis"}
+        hrefSwapLink={""}
       />
       <LayoutModule title="Les supers avantages " className="">
         <LayoutCardItem>
