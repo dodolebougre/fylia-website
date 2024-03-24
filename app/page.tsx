@@ -135,7 +135,7 @@ export default function HomePage() {
             list2={"Créez votre propre galerie ✓"}
             list3={"Marquez les esprits ✓"}
             buttonText={"En savoir plus ☞"}
-            buttonHref={"/oeuvre"}
+            buttonHref={"/peinture"}
           />
           <SimpleImage
             image={
@@ -160,7 +160,7 @@ export default function HomePage() {
             list2={"Partagez votre histoire et vos valeurs ✓"}
             list3={"Embelissez vos espaces de travail ✓"}
             buttonText={"En savoir plus ☞"}
-            buttonHref={""}
+            buttonHref={"/fresque"}
           />
         </LayoutCardItem>
         <LayoutCardItem className={"border-t-0"}>
@@ -172,7 +172,7 @@ export default function HomePage() {
             list2={"Proposez un moyen de partage novateur et engagé ✓"}
             list3={"Faites décourvrir l'importance de l'art ✓"}
             buttonText={"En savoir plus ☞"}
-            buttonHref={""}
+            buttonHref={"/team-building"}
           />
           <SimpleImage
             image={

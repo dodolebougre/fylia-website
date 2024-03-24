@@ -18,6 +18,7 @@ import { SimpleImage } from "@/src/features/components/simple-image";
 import { ValuePropCompText } from "@/src/features/components/value-prop-comp-text";
 import { LayoutCardItem } from "@/src/features/layout/layout-card-item";
 import LayoutModule from "@/src/features/layout/layout-module";
+import Link from "next/link";
 import { HiOutlinePencil } from "react-icons/hi2";
 import { PiAtomThin, PiFlowerLight } from "react-icons/pi";
 
@@ -35,7 +36,7 @@ const ServiceOeuvrePage = () => {
         typeWriter1={"vos valeurs"}
         typeWriter2={"vos envies"}
         typeWriter3={"vos locaux"}
-        hrefSwapLink={""}
+        hrefSwapLink={"/devis"}
       />
       <LayoutModule title="Déroulement" className="">
         <LayoutCardItem>
@@ -89,7 +90,7 @@ const ServiceOeuvrePage = () => {
             list2={"Embellir vos lieux de travail 🤩"}
             list3={"Rendre votre groupe plus productif et créatif 🤝"}
             buttonText={"Decouvrez les avantages ☞"}
-            buttonHref={""}
+            buttonHref={"/blogs?tag=Art"}
           />
           <SimpleImage
             image={"/image/hero-oeuvre.png"}
@@ -120,9 +121,11 @@ const ServiceOeuvrePage = () => {
               </Typography>
             </CardContent>
             <CardFooter>
-              <Button variant={"fyliaButtonBlue"}>
-                Choissiez un artiste ☞
-              </Button>
+            <Link href={"/artiste?tag=peinture"}>
+                <Button variant={"fyliaButtonBlue"}>
+                  Choissiez un artiste ☞
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </LayoutCardItem>
@@ -146,9 +149,11 @@ const ServiceOeuvrePage = () => {
               </Typography>
             </CardContent>
             <CardFooter>
-              <Button variant={"fyliaButtonBlue"}>
-                Devis gratuit et rapide ☞
-              </Button>
+            <Link href={"/devis"}>
+                <Button variant={"fyliaButtonBlue"}>
+                  Devis gratuit et rapide ☞
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </LayoutCardItem>

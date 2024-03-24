@@ -19,6 +19,7 @@ import { ValuePropCompText } from "@/src/features/components/value-prop-comp-tex
 import { LayoutCardItem } from "@/src/features/layout/layout-card-item";
 import LayoutModule from "@/src/features/layout/layout-module";
 import Image from "next/image";
+import Link from "next/link";
 import { HiOutlinePencil } from "react-icons/hi2";
 import { PiAtomThin, PiFlowerLight } from "react-icons/pi";
 const ServiceTeamBuildingPage = () => {
@@ -35,7 +36,7 @@ const ServiceTeamBuildingPage = () => {
         typeWriter1={"votre équipe"}
         typeWriter2={"votre bien être"}
         typeWriter3={"vous ☞"}
-        hrefSwapLink={""}
+        hrefSwapLink={"/devis"}
       />
       <LayoutModule title="Les supers avantages " className="">
         <LayoutCardItem>
@@ -122,9 +123,11 @@ const ServiceTeamBuildingPage = () => {
               </Typography>
             </CardContent>
             <CardFooter>
-              <Button variant={"fyliaButtonBlue"}>
-                Choissiez un artiste ☞
-              </Button>
+              <Link href={"/artiste?tag=team-building"}>
+                <Button variant={"fyliaButtonBlue"}>
+                  Choissiez un artiste ☞
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </LayoutCardItem>
@@ -148,9 +151,11 @@ const ServiceTeamBuildingPage = () => {
               </Typography>
             </CardContent>
             <CardFooter>
-              <Button variant={"fyliaButtonBlue"}>
-                Devis gratuit et rapide ☞
-              </Button>
+              <Link href={"/devis"}>
+                <Button variant={"fyliaButtonBlue"}>
+                  Devis gratuit et rapide ☞
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </LayoutCardItem>
