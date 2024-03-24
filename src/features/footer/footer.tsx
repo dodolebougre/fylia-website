@@ -99,7 +99,7 @@ const Footer = () => {
           <div className="mb-5 ">
             <Typography variant={"h2"}>Légal </Typography>
 
-            <Link href="http://localhost:3000/legal?tag=CGV">
+            <Link href="/legal?tag=CGV">
               <Typography
                 variant={"small"}
                 className="hover:underline  transition duration-700 ease-in-out"
