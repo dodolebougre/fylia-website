@@ -48,7 +48,7 @@ const ServiceTeamBuildingPage = () => {
             list2={"Challenger la créativité de vos employés 🎨"}
             list3={"Renforcer les liens au sein du groupe 💙"}
             buttonText={"Découvrir les avantages ☞"}
-            buttonHref={"/blogs?tag=art"}
+            buttonHref={"/blogs?tag=Art"}
           />
           <SimpleImage
             image={
@@ -90,7 +90,7 @@ const ServiceTeamBuildingPage = () => {
             }
             list3={"Savoir se montrer créatif 👓"}
             buttonText={"Découvrez les avantages ☞"}
-            buttonHref={""}
+            buttonHref={"/blogs?tag=Art"}
           />
           <SimpleImage
             image={

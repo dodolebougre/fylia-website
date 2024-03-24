@@ -90,7 +90,7 @@ const ServiceFresquePage = () => {
             list2={"Embellir vos lieux de travail 🤩"}
             list3={"Rendre votre groupe plus productif et créatif 🤝"}
             buttonText={"Decouvrez les avantages ☞"}
-            buttonHref={""}
+            buttonHref={"/blogs?tag=Art"}
           />
           <SimpleImage
             image={"/image/hero-fresque.png"}
@@ -121,7 +121,7 @@ const ServiceFresquePage = () => {
               </Typography>
             </CardContent>
             <CardFooter>
-              <Link href={"/artiste?tag=fresque"}>
+              <Link href={"/artiste?tag=Fresque"}>
                 <Button variant={"fyliaButtonBlue"}>
                   Choissiez un artiste ☞
                 </Button>
