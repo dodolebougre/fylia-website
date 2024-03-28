@@ -86,8 +86,7 @@ export default function HomePage() {
                 Réalisez un investissement <strong>engagé</strong>, qui exprime
                 les <strong>valeurs de votre entreprise</strong>, vous
                 différencie de la concurrence tout en{" "}
-                <strong>soutenant l’art</strong> et les artistes{" "}
-                <strong>locaux</strong> ✶
+                <strong>soutenant les artistes locaux</strong> ✶
               </Typography>
             }
           ></ValuePropCompText>
@@ -145,6 +144,7 @@ export default function HomePage() {
         </LayoutCardItem>
         <LayoutCardItem className={"border-t-0"}>
           <CompareSlider
+            className={"xl:h-[320px]"}
             altImage1={""}
             srciImage1={"/image/fresque-entreprise.png"}
             altImage2={""}
@@ -178,7 +178,7 @@ export default function HomePage() {
             }
             alt={""}
             className={"pb-0 mb-0"}
-            size={"md:h-[350px] h-[190px]"}
+            size={"xl:h-[360px] md:h-[350px] h-[190px]"}
           />
         </LayoutCardItem>
       </LayoutModule>

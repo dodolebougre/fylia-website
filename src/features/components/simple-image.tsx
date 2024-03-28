@@ -15,7 +15,7 @@ export const SimpleImage = ({
   return (
     <div
       className={cn(
-        "inline-block overflow-hidden bg-card text-card-foreground w-[350px] md:w-[590px] xl:w-[1190px] m-1 border shadow-md",
+        "inline-block overflow-hidden bg-card text-card-foreground w-[350px] md:w-[590px] xl:w-[990px] m-1 border shadow-md",
         className
       )}
     >

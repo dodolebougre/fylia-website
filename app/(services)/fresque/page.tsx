@@ -83,8 +83,8 @@ const ServiceFresquePage = () => {
           <SimpleImage
             image={"/image/hero-fresque.png"}
             alt={"Personnes heureuses en entreprise"}
-            className={"pb-0 mb-0"}
-            size={"md:h-[350px] h-[190px]"}
+            className={"pb-0 mb-1"}
+            size={"xl:h-[360px] md:h-[350px] h-[190px]"}
           />
         </LayoutCardItem>
       </LayoutModule>{" "}
@@ -104,7 +104,7 @@ const ServiceFresquePage = () => {
                   favorisant ainsi la collaboration et l'engagement de toute
                   l'équipe dans le processus créatif,
                 </strong>{" "}
-                créant un moment de partage inoubliable.
+                créant un moment de partage inoubliable et authentique.
               </Typography>
             }
           ></ValuePropCompText>

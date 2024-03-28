@@ -7,7 +7,7 @@ import { cn } from "../../lib/utils";
 const cardVariants = cva("", {
   variants: {
     variant: {
-      item: "bg-card text-card-foreground w-[358px] md:w-[598px] xl:w-[1198px] p-1 ",
+      item: "bg-card text-card-foreground w-[358px] md:w-[598px] xl:w-[998px] p-1 ",
       default: "border bg-card text-card-foreground shadow-sm",
       background: "text-background-foreground border bg-background",
       error: "border border-destructive bg-card text-foreground",

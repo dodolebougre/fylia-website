@@ -16,7 +16,7 @@ export const LayoutPage = ({ children, className, title }: LayoutPageProps) => {
       )}
     >
       <Typography variant={"h1"}>{title}</Typography>
-      <div className="xl:w-[1200px] md:w-[600px] w-[360px] flex flex-col items-center justify-center  m-10 shadow-lg border">
+      <div className="xl:w-[1000px] md:w-[600px] w-[360px] flex flex-col items-center justify-center  m-10 shadow-lg border">
         {children}
       </div>
     </div>

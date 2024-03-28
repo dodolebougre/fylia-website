@@ -86,8 +86,8 @@ const ServiceTeamBuildingPage = () => {
           <SimpleImage
             image={"/image/hero-seminaire.png"}
             alt={"Personnes heureuses en entreprise"}
-            className={"pb-0 mb-0"}
-            size={"md:h-[350px] h-[190px]"}
+            className={"pb-0 mb-1"}
+            size={"xl:h-[370px] md:h-[350px] h-[190px]"}
           />
         </LayoutCardItem>
       </LayoutModule>{" "}
@@ -116,7 +116,10 @@ const ServiceTeamBuildingPage = () => {
                 {" "}
                 Les coachs plasticiens sont là pour offrir des conseils et une
                 orientation artistique tout au long du processus.{" "}
-                <strong>Leur expertise aide les équipes à se dépasser !</strong>
+                <strong>
+                  Leur expertise aide les équipes à se dépasser{" "}
+                </strong>{" "}
+                et à prendre confiance !
               </Typography>
             }
             icon={

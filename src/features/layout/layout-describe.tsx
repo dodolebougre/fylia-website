@@ -13,7 +13,7 @@ export const LayoutDescribe = ({
   return (
     <section
       className={cn(
-        "xl:flex-row  justify-center items-center flex flex-col border xl:w-[1200px] md:w-[600px] w-[360px]",
+        "xl:flex-row  justify-center items-center flex flex-col border xl:w-[1000px] md:w-[600px] w-[360px]",
         { [border]: border },
         { [color]: color }
       )}

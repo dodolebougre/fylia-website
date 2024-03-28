@@ -72,7 +72,7 @@ const ServiceOeuvrePage = () => {
         <LayoutCardItem className={"border-t-0"}>
           <DescribeCompText
             className="flex xl:items-start xl:text-start text-center items-center"
-            title={" Les avantages pour l'entreprises !"}
+            title={" Les avantages pour l'entreprise !"}
             title2={"Peignez ☞"}
             list1={"Bénéficier d’un dispositif fiscal avantageux 💸"}
             list2={"Embellir vos lieux de travail 🤩"}
@@ -83,8 +83,8 @@ const ServiceOeuvrePage = () => {
           <SimpleImage
             image={"/image/hero-oeuvre.png"}
             alt={"Personnes heureuses en entreprise"}
-            className={"pb-0 mb-0"}
-            size={"md:h-[350px] h-[190px]"}
+            className={"pb-0 mb-1"}
+            size={"xl:h-[360px] md:h-[350px] h-[190px]"}
           />
         </LayoutCardItem>
       </LayoutModule>{" "}
@@ -99,7 +99,7 @@ const ServiceOeuvrePage = () => {
             text={
               <Typography variant={"p"}>
                 Vous échangerez sur son histoire et son style,{" "}
-                <strong>sa méthode de travail et ses inspirations. ✷</strong>
+                <strong>sa méthode de travail et ses inspirations ✷</strong>
               </Typography>
             }
           ></ValuePropCompText>
@@ -125,7 +125,7 @@ const ServiceOeuvrePage = () => {
                 {" "}
                 Chacun des employés challengera sa créativité{" "}
                 <strong>
-                  permettant ainsi a l'artiste de créer l'oeuvre par la suite !
+                  permettant ainsi a l'artiste de créer l'oeuvre !
                 </strong>{" "}
                 ✶
               </Typography>
@@ -154,7 +154,7 @@ const ServiceOeuvrePage = () => {
             image={"/image/artistes.png"}
             alt={"Artistes peintres"}
             className={"border-none shadow-none "}
-            size={"md:h-[350px] h-[190px]"}
+            size={" md:h-[350px] h-[190px]"}
           />
         </LayoutCardItem>
         <LayoutCardItem className={"border-t-0"}>

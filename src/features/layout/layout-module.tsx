@@ -24,7 +24,7 @@ const LayoutModule = ({
       </Typography>
       <div
         className={cn(
-          "xl:w-[1200px] md:w-[600px] w-[360px] flex flex-col items-center justify-center  m-10 shadow-lg",
+          "xl:w-[1000px] md:w-[600px] w-[360px] flex flex-col items-center justify-center  m-10 shadow-lg",
           className
         )}
       >

@@ -28,7 +28,7 @@ export const Hero = ({
 }: HeroPageProps) => {
   return (
     <div
-      className="bg-fixed bg-center bg-cover object-cover mb-10 border-b shadow-md"
+      className="xl:bg-fixed bg-center bg-cover object-cover mb-10 border-b shadow-md"
       style={{
         backgroundImage: `url("${backgroundImageHref}")`,
       }}
