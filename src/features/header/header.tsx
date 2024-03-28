@@ -22,7 +22,7 @@ export const Header = () => {
           </a>
         </div>{" "}
         <Link href="/">
-          <div className="text-center lg:ml-[305px] sm:ml-[-25px] ml-[-30px] ">
+          <div className="text-center lg:ml-[305px] sm:ml-[-25px] ml-[-20px] ">
             <FyliaName />
             <Typography variant="small" className="text-sm font-light">
               Feel good by art
