@@ -64,7 +64,7 @@ const EquipePage = () => {
           <SimpleImage
             image={"image/pp-valentin.png"}
             alt={""}
-            className={"pb-0 mb-0"}
+            className={"pb-0 mb-1"}
             size={"md:h-[350px] h-[190px]"}
           />
         </LayoutCardItem>{" "}
