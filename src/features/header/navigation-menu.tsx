@@ -45,7 +45,7 @@ export function NavigationMenuHeader() {
                 title="Peinture sur mesure"
                 icon={<PiPaintBrushThin />}
               >
-                Aux valeurs de vos salariés
+                Aux couleurs de votre entreprise
               </ListItem>
               <ListItem
                 href="/fresque"
@@ -59,7 +59,7 @@ export function NavigationMenuHeader() {
                 title="Team Building en entreprise"
                 icon={<PiHeartThin />}
               >
-                Pour une activité exceptionelle
+                Pour féderer vos collaborateurs
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -81,7 +81,7 @@ export function NavigationMenuHeader() {
                 l'aspect financier
               </ListItem>
               <ListItem
-                href="/histoire"
+                href="/equipe"
                 title="Qui sommes nous ?"
                 icon={<PiQuestionThin />}
               >

@@ -17,20 +17,20 @@ import {
 import { CarouselItem } from "@/src/components/ui/carousel";
 import { AccordionForm } from "@/src/features/components/accordion";
 import { Banner } from "@/src/features/components/banner";
-import { AlertCalendlyPage } from "@/src/features/components/calendly";
 import { CarouselCard } from "@/src/features/components/carousel";
 import { ContactForm } from "@/src/features/components/contact-form";
 import { Home } from "@/src/features/components/home";
 import Image from "next/image";
+import Link from "next/link";
 import { CiPen } from "react-icons/ci";
 import { PiClockCountdownLight, PiLeafLight } from "react-icons/pi";
 import { Button } from "../src/components/ui/button";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="pb-10">
       <Home
-        titreHero="L'art personnalisé, au service du bien être"
+        titreHero="L'art sur mesure, au service du bien être"
         sousTitreHero="Nos artistes vous aident à améliorer vos locaux grâce à des prestations uniques."
         buttonHero="Voir nos artistes ☞"
         buttonHero2="Je suis un artiste ☞"
@@ -138,9 +138,7 @@ export default function HomePage() {
             buttonHref={"/peinture"}
           />
           <SimpleImage
-            image={
-              "https://images.unsplash.com/photo-1566131929856-21b5077cd4fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
+            image={"/image/entreprise-peinture.png"}
             alt={""}
             size={"md:h-[350px] h-[190px]"}
           ></SimpleImage>
@@ -155,10 +153,10 @@ export default function HomePage() {
           <DescribeCompText
             className=" flex xl:items-end xl:text-end text-center items-center"
             title={"Des fresques sur-mesure"}
-            title2={"Une prestation entièrement personnalisable"}
-            list1={"Transformez vos espaces de travail ✓"}
-            list2={"Partagez votre histoire et vos valeurs ✓"}
-            list3={"Embelissez vos espaces de travail ✓"}
+            title2={"Une prestation personnalisable !"}
+            list1={"Embelissez vos espaces de travail ✓"}
+            list2={"Engagé vos collaborateurs ✓"}
+            list3={"Créer un moment inoubliable ✓"}
             buttonText={"En savoir plus ☞"}
             buttonHref={"/fresque"}
           />
@@ -166,11 +164,11 @@ export default function HomePage() {
         <LayoutCardItem className={"border-t-0"}>
           <DescribeCompText
             className="flex xl:items-start xl:text-start text-center items-center"
-            title={"Un séminaire organisé de A à Z"}
+            title={"Un team-building organisé de A à Z"}
             title2={" Faites participer vos employés !"}
-            list1={"Fédérez vos employés autour de nos services artistiques ✓"}
+            list1={"Fédérez vos employés autour d'un atelier artistique ✓"}
             list2={"Proposez un moyen de partage novateur et engagé ✓"}
-            list3={"Faites décourvrir l'importance de l'art ✓"}
+            list3={"Mener à bien un projet qui à du sens ✓"}
             buttonText={"En savoir plus ☞"}
             buttonHref={"/team-building"}
           />
@@ -185,10 +183,8 @@ export default function HomePage() {
         </LayoutCardItem>
       </LayoutModule>
       <Banner
-        source={
-          "https://images.unsplash.com/photo-1522019929513-29058d1b3145?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        }
-        text={"Vous voulez décorer vos locaux grace à l'art?"}
+        source={"/image/home.png"}
+        text={"Ajoutez de l’art dans vos locaux !"}
         textButton={"Devis sur mesure"}
       />
       <LayoutModule title={"Comment ça marche ?"}>
@@ -207,15 +203,28 @@ export default function HomePage() {
                   variant={"default"}
                   className="border text-card-foreground "
                 >
-                  <CardContent className="flex flex-col aspect-square items-center justify-center p-6 text-white bg-black/20 backdrop-blur m-4">
-                    <CardTitle>Etape 1</CardTitle>
-                    <Typography variant={"p"}>
-                      Trouvez un artiste qui vous convient ou{" "}
-                      <strong>
-                        {" "}
-                        remplissez le formulaire (devis sur mesure){" "}
-                      </strong>
-                    </Typography>
+                  <CardContent className="flex flex-col aspect-square items-center justify-center text-white bg-black/40 relative group ">
+                    <div className="absolute flex justify-center items-center group-hover:invisible z-10 cursor-pointer group inset-0 text-center flex-col ">
+                      <CardTitle>Etape 1 </CardTitle>
+                      <Typography
+                        variant={"h1"}
+                        className="mt-2 rotate-[-90deg]"
+                      >
+                        ☞{" "}
+                      </Typography>
+                    </div>
+                    <div className="absolute inset-0 bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center transition-opacity text-center p-10 cursor-pointer duration-700 ease-in-out group">
+                      <Typography
+                        className="invisible group-hover:visible"
+                        variant={"p"}
+                      >
+                        Trouvez un artiste qui vous convient ou{" "}
+                        <strong>
+                          {" "}
+                          remplissez le formulaire (devis sur mesure){" "}
+                        </strong>
+                      </Typography>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -233,16 +242,29 @@ export default function HomePage() {
                   variant={"default"}
                   className="border text-card-foreground "
                 >
-                  <CardContent className="flex flex-col aspect-square items-center justify-center p-6 text-white bg-black/20 backdrop-blur m-4">
-                    <CardTitle>Etape 2</CardTitle>
-                    <Typography variant={"p"}>
-                      Nous vous contactons pour vous présenter tout les
-                      <strong>
-                        {" "}
-                        aspects et vous proposez des prestations
-                      </strong>{" "}
-                      parfaitement adaptées à votre entreprise.
-                    </Typography>
+                  <CardContent className="flex flex-col aspect-square items-center justify-center text-white bg-black/40 relative group ">
+                    <div className="absolute flex justify-center items-center group-hover:invisible z-10 cursor-pointer group inset-0 text-center flex-col ">
+                      <CardTitle>Etape 2 </CardTitle>
+                      <Typography
+                        variant={"h1"}
+                        className="mt-2 rotate-[-90deg]"
+                      >
+                        ☞{" "}
+                      </Typography>
+                    </div>
+                    <div className="absolute inset-0 bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center transition-opacity text-center p-10 cursor-pointer duration-700 ease-in-out group">
+                      <Typography
+                        className="invisible group-hover:visible"
+                        variant={"p"}
+                      >
+                        Nous vous contactons pour vous présenter tout les
+                        <strong>
+                          {" "}
+                          aspects et vous proposez des prestations
+                        </strong>{" "}
+                        parfaitement adaptées à votre entreprise.
+                      </Typography>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -261,14 +283,28 @@ export default function HomePage() {
                   variant={"default"}
                   className="border text-card-foreground "
                 >
-                  <CardContent className="flex flex-col aspect-square items-center justify-center p-6 text-white bg-black/20 backdrop-blur m-4">
-                    <CardTitle>Etape 3</CardTitle>
-                    <Typography variant={"p"}>
-                      En collaboration avec vous,{" "}
-                      <strong>nous perfectionnons</strong> ces propositions pour{" "}
-                      <strong>créer un événement ou une prestation</strong> qui
-                      correspond pleinement à vos attentes.
-                    </Typography>
+                  <CardContent className="flex flex-col aspect-square items-center justify-center text-white bg-black/40 relative group ">
+                    <div className="absolute flex justify-center items-center group-hover:invisible z-10 cursor-pointer group inset-0 text-center flex-col ">
+                      <CardTitle>Etape 3 </CardTitle>
+                      <Typography
+                        variant={"h1"}
+                        className="mt-2 rotate-[-90deg]"
+                      >
+                        ☞{" "}
+                      </Typography>
+                    </div>
+                    <div className="absolute inset-0 bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center transition-opacity text-center p-10 cursor-pointer duration-700 ease-in-out group">
+                      <Typography
+                        className="invisible group-hover:visible"
+                        variant={"p"}
+                      >
+                        En collaboration avec vous,{" "}
+                        <strong>nous perfectionnons</strong> ces propositions
+                        pour{" "}
+                        <strong>créer un événement ou une prestation</strong>{" "}
+                        qui correspond pleinement à vos attentes.
+                      </Typography>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -286,12 +322,25 @@ export default function HomePage() {
                   variant={"default"}
                   className="border text-card-foreground "
                 >
-                  <CardContent className="flex flex-col aspect-square items-center justify-center p-6 text-white bg-black/20 backdrop-blur m-4">
-                    <CardTitle>Etape 4</CardTitle>
-                    <Typography variant={"p"}>
-                      Nous fixons une date et le tour est joué.{" "}
-                      <strong>Place à l’artiste!</strong>
-                    </Typography>
+                  <CardContent className="flex flex-col aspect-square items-center justify-center text-white bg-black/40 relative group ">
+                    <div className="absolute flex justify-center items-center group-hover:invisible z-10 cursor-pointer group inset-0 text-center flex-col ">
+                      <CardTitle>Etape 4 </CardTitle>
+                      <Typography
+                        variant={"h1"}
+                        className="mt-2 rotate-[-90deg]"
+                      >
+                        ☞{" "}
+                      </Typography>
+                    </div>
+                    <div className="absolute inset-0 bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center transition-opacity text-center p-10 cursor-pointer duration-700 ease-in-out group">
+                      <Typography
+                        className="invisible group-hover:visible"
+                        variant={"p"}
+                      >
+                        Nous fixons une date et le tour est joué.{" "}
+                        <strong>Place à l’artiste!</strong>
+                      </Typography>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -307,8 +356,8 @@ export default function HomePage() {
               "https://images.unsplash.com/photo-1611244419377-b0a760c19719?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
             alt={""}
-            className={"pb-0 mb-0"}
-            size={"md:h-[750px] h-[400px]"}
+            className={"pb-0 mb-1"}
+            size={"xl:h-[800px] md:h-[750px] h-[400px]"}
           />
         </LayoutCardItem>
       </LayoutModule>
@@ -321,11 +370,11 @@ export default function HomePage() {
               </Typography>{" "}
             </CardContent>
             <CardFooter className="flex items-center justify-center">
-              <AlertCalendlyPage>
+              <Link href="/rendez-vous">
                 <Button variant="fyliaButtonBlue">
                   Je souhaite prendre un rendez vous !
                 </Button>
-              </AlertCalendlyPage>
+              </Link>
             </CardFooter>
           </Card>
           <AccordionForm
@@ -352,6 +401,6 @@ export default function HomePage() {
           />
         </LayoutCardItem>
       </LayoutModule>
-    </>
+    </div>
   );
 }

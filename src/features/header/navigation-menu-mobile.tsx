@@ -13,7 +13,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../../components/ui/accordion";
-import { AlertCalendlyPage } from "../components/calendly";
 
 export function NavigationMenuMobile() {
   return (
@@ -46,7 +45,7 @@ export function NavigationMenuMobile() {
                   title="Peinture sur mesure"
                   icon={<PiPaintBrushThin />}
                 >
-                  Aux valeurs de vos salariés
+                  Aux couleurs de votre entreprise
                 </ListItemMobile>
               </NavigationMenu>
             </SheetClose>
@@ -73,7 +72,7 @@ export function NavigationMenuMobile() {
                   title="Team Building en entreprise"
                   icon={<PiHeartThin />}
                 >
-                  Pour une activité exceptionelle
+                  Pour fédérer vos collaborateurs
                 </ListItemMobile>
               </NavigationMenu>
             </SheetClose>
@@ -98,7 +97,7 @@ export function NavigationMenuMobile() {
                   icon={<PiPaintBrushThin />}
                   className="text-start "
                 >
-                  Plein de sujets passionnants
+                  Plein de sujets passionnants !
                 </ListItemMobile>
               </NavigationMenu>
             </SheetClose>
@@ -107,7 +106,7 @@ export function NavigationMenuMobile() {
             <SheetClose className="text-start">
               <NavigationMenu className="mt-0 pt-0">
                 <ListItemMobile
-                  href="/histoire"
+                  href="/equipe"
                   title="Qui sommes nous ?"
                   icon={<PiWallThin />}
                 >
@@ -120,11 +119,13 @@ export function NavigationMenuMobile() {
         </AccordionItem>
       </Accordion>
       <div className="flex items-center justify-center m-4">
-        <AlertCalendlyPage>
-          <Button variant={"fyliaButtonBlue"} size={"default"}>
-            Contactez-nous !
-          </Button>
-        </AlertCalendlyPage>
+        <Link href={"/rendez-vous"}>
+          <SheetClose>
+            <Button variant={"fyliaButtonBlue"} size={"default"}>
+              Contactez-nous !
+            </Button>
+          </SheetClose>
+        </Link>
       </div>
     </div>
   );

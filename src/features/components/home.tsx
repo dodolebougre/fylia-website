@@ -27,14 +27,14 @@ export const Home = ({
 }: HeroPageProps) => {
   return (
     <div
-      className="xl:bg-fixed bg-center bg-cover object-cover mb-10 border-b shadow-md h-screen flex justify-center items-center"
+      className="xl:bg-fixed bg-center bg-cover object-cover mb-10 border-b shadow-md h-screen flex justify-center items-center flex-col"
       style={{
         backgroundImage: `url("/image/home2.png")`,
       }}
     >
       <Card
         variant={"default"}
-        className="flex flex-col items-center justify-center bg-black/20 text-center xl:w-[1350px] md:w-[600px] w-[360px] p-5 backdrop-blur border-none text-white mt-20"
+        className="flex flex-col items-center justify-center bg-black/20 text-center xl:w-[1350px] md:w-[600px] w-[360px] p-5 backdrop-blur border-none text-white mt-20 pb-10"
       >
         {" "}
         <Typography
@@ -64,8 +64,8 @@ export const Home = ({
             </Button>
           </ScrollLink>
         </div>
-        <Swap hrefLink={hrefSwapLink} />
-      </Card>
+      </Card>{" "}
+      <Swap hrefLink={hrefSwapLink} />
     </div>
   );
 };

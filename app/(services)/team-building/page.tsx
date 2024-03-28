@@ -1,16 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/src/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/src/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/src/components/ui/card";
 import { Typography } from "@/src/components/ui/typography";
 import { AccordionForm } from "@/src/features/components/accordion";
-import { Banner } from "@/src/features/components/banner";
-import { AlertCalendlyPage } from "@/src/features/components/calendly";
 import { CompareSlider } from "@/src/features/components/compare-slider";
 import { DescribeCompText } from "@/src/features/components/describe-comp-text";
 import { Hero } from "@/src/features/components/hero";
@@ -24,19 +16,18 @@ import { HiOutlinePencil } from "react-icons/hi2";
 import { PiAtomThin, PiFlowerLight } from "react-icons/pi";
 const ServiceTeamBuildingPage = () => {
   return (
-    <>
+    <div className="bg-gradient-to-r from-rose-100 from-0% via-white via-50% to-rose-100 to-100% pb-10">
       <Hero
         backgroundImageHref={"/image/hero-seminaire.png"}
         titreHero={"Un team building pour "}
         sousTitreHero={
-          " Nos artistes locaux vous aident à créer une atmosphère de bien-être au travail."
+          " Fédérez vos équipes au cours d’un atelier créatif et artistique."
         }
         buttonHero={"Devis sur mesure ☞"}
         hrefButtonHero={"/devis"}
         typeWriter1={"votre équipe"}
         typeWriter2={"votre bien être"}
         typeWriter3={"vous ☞"}
-        hrefSwapLink={""}
       />
       <LayoutModule title="Les supers avantages " className="">
         <LayoutCardItem>
@@ -47,8 +38,8 @@ const ServiceTeamBuildingPage = () => {
             list1={"Travailler ensemble pour créer un moment inoubliable ❤️‍🔥"}
             list2={"Challenger la créativité de vos employés 🎨"}
             list3={"Renforcer les liens au sein du groupe 💙"}
-            buttonText={"Découvrir les avantages ☞"}
-            buttonHref={"/blogs?tag=Art"}
+            buttonText={"Découvrez nos artistes ☞"}
+            buttonHref={"/artistes?tag=Team Building"}
           />
           <SimpleImage
             image={
@@ -71,8 +62,8 @@ const ServiceTeamBuildingPage = () => {
             title={"Vos équipes vont adorer"}
             title2={"Prêt ?"}
             list1={"Créer des œuvres autour de vos valeurs 🤝"}
-            list2={"Sortir du cadre de travail habituel 🧠"}
-            list3={"Découvrir un artiste, son style et son histoire 👨🏻‍🎨"}
+            list2={"Découvrir une nouvelle manière de faire équipe 🧠"}
+            list3={"Découvrir un artiste et son histoire 👨🏻‍🎨"}
             buttonText={"Découvrez les avantages ☞"}
             buttonHref={"/blogs?tag=Art"}
           />
@@ -80,86 +71,26 @@ const ServiceTeamBuildingPage = () => {
         <LayoutCardItem className={"border-t-0"}>
           <DescribeCompText
             className="flex xl:items-start xl:text-start text-center items-center"
-            title={"Ce que vos équipes vont apprendre !"}
+            title={"Les compétences acquises !"}
             title2={"Peignez 🖌️"}
             list1={
-              "S’organiser en équipe pour atteindre un objectif commun tout en respectant le timing imposé ⏱️"
+              "Faire équipe dans un projet créatif pour atteindre un but commun ⏱️"
             }
-            list2={
-              "Communiquer ensemble pour réaliser l’oeuvre de leurs rêves 🖼️"
+            list2={"Communiquer et s’écouter pour co-créer l’oeuvre idéale 🖼️"}
+            list3={
+              "Faire ressortir sa créativité, et chercher l’inspiration ! 👓"
             }
-            list3={"Savoir se montrer créatif 👓"}
-            buttonText={"Découvrez les avantages ☞"}
-            buttonHref={"/blogs?tag=Art"}
+            buttonText={"Devis gratuit et rapide ☞"}
+            buttonHref={"/devis"}
           />
           <SimpleImage
-            image={
-              "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
+            image={"/image/hero-seminaire.png"}
             alt={"Personnes heureuses en entreprise"}
             className={"pb-0 mb-0"}
             size={"md:h-[350px] h-[190px]"}
           />
         </LayoutCardItem>
       </LayoutModule>{" "}
-      <LayoutModule title={"Déroulement en amont"}>
-        <LayoutCardItem className={"flex items-center justify-between"}>
-          <Card className="m-1 flex items-center justify-center flex-col">
-            <CardHeader>
-              <CardTitle>
-                Le choix de l'artiste directement sur le site...
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Typography variant={"p"}>
-                Choisissez un artiste représentant le mieux vos valeurs ✅
-              </Typography>
-              <Typography variant={"p"}>
-                Faites participer les employés pour le choix final de l'artiste
-                👨🏻‍🎨
-              </Typography>
-              <Typography variant={"p"}>
-                On vous rappelle, et on fait le point 🤝
-              </Typography>
-            </CardContent>
-            <CardFooter>
-              <Link href={"/artiste?tag=team-building"}>
-                <Button variant={"fyliaButtonBlue"}>
-                  Choissiez un artiste ☞
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        </LayoutCardItem>
-        <LayoutCardItem className={" border-t-0"}>
-          <Card className="m-1 flex items-center justify-center flex-col">
-            <CardHeader>
-              <CardTitle>
-                ...ou remplissez le devis et on vous propose un artiste
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Typography variant={"p"}>
-                Completez le devis en 1 min ⏱️
-              </Typography>
-              <Typography variant={"p"}>
-                On vous présente l'artiste parfait en fontion de vos réponses 👨🏻‍🎨
-              </Typography>
-              <Typography variant={"p"}>
-                On fixe le jour J et l’artiste qui interviendra, ainsi qu’un
-                thême vous tenant à coeur ❤️
-              </Typography>
-            </CardContent>
-            <CardFooter>
-              <Link href={"/devis"}>
-                <Button variant={"fyliaButtonBlue"}>
-                  Devis gratuit et rapide ☞
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        </LayoutCardItem>
-      </LayoutModule>
       <LayoutModule title="Les activités" className="xl:flex-row">
         <LayoutCardItem>
           <ValuePropCompText
@@ -212,13 +143,50 @@ const ServiceTeamBuildingPage = () => {
           ></ValuePropCompText>
         </LayoutCardItem>
       </LayoutModule>
-      <Banner
-        source={
-          "https://images.unsplash.com/photo-1522019929513-29058d1b3145?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        }
-        text={"Mettez vous dans la peau d'un artiste, et à vos pinceaux !"}
-        textButton={"Devis sur mesure"}
-      />
+      <LayoutModule title={"En amont"}>
+        <LayoutCardItem className={""}>
+          <DescribeCompText
+            className="flex xl:items-start xl:text-start text-center items-center"
+            title={""}
+            title2={"Le choix de l'artiste directement sur le site..."}
+            list1={"Choisissez un artiste representant le mieux vos valeurs ✅"}
+            list2={
+              "Faites participer vos employés pour le choix final de l'artiste 👨🏻‍🎨"
+            }
+            list3={"On vous rappelle et on fait le point 🤝"}
+            buttonText={"Decouvrez nos artistes ☞"}
+            buttonHref={"/artistes?tag=Team Building"}
+          />
+          <SimpleImage
+            image={"/image/artistes.png"}
+            alt={"Artistes peintres"}
+            className={"border-none shadow-none "}
+            size={"md:h-[350px] h-[190px]"}
+          />
+        </LayoutCardItem>
+        <LayoutCardItem className={"border-t-0"}>
+          <SimpleImage
+            image={"/image/devis.png"}
+            alt={"Devis"}
+            className={"border-none shadow-none "}
+            size={"md:h-[350px] h-[190px]"}
+          />
+          <DescribeCompText
+            className=" flex xl:items-end xl:text-end text-center items-center"
+            title={""}
+            title2={"...ou remplissez un devis et on vous propose un artiste"}
+            list1={"Complétez le devis en 1 min ⏱️"}
+            list2={
+              "On vous présente l'artiste parfait en fonction de vos réponses 🤩"
+            }
+            list3={
+              "On fixe le jour J et l'artiste parfait pour vous, ainsi qu'un thème vous tenant à coeur ♥️"
+            }
+            buttonText={"Devis gratuit et rapide ☞"}
+            buttonHref={"/devis"}
+          />
+        </LayoutCardItem>
+      </LayoutModule>
       <LayoutModule title={"Ils nous soutiennent"}>
         <LayoutCardItem>
           <Card className="my-10 flex justify-center items-center">
@@ -264,11 +232,11 @@ const ServiceTeamBuildingPage = () => {
               </Typography>{" "}
             </CardContent>
             <CardFooter className="flex items-center justify-center ">
-              <AlertCalendlyPage>
+              <Link href="/rendez-vous">
                 <Button variant="fyliaButtonBlue">
                   Je souhaite prendre un rendez vous !
                 </Button>
-              </AlertCalendlyPage>
+              </Link>
             </CardFooter>
           </Card>
           <AccordionForm
@@ -293,7 +261,7 @@ const ServiceTeamBuildingPage = () => {
           />
         </LayoutCardItem>
       </LayoutModule>
-    </>
+    </div>
   );
 };
 

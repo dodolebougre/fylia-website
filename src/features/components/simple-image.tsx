@@ -13,7 +13,12 @@ export const SimpleImage = ({
   size,
 }: SimpleImageProps) => {
   return (
-    <div className="inline-block overflow-hidden bg-card text-card-foreground w-[350px] md:w-[590px] xl:w-[1190px] m-1 border shadow-md">
+    <div
+      className={cn(
+        "inline-block overflow-hidden bg-card text-card-foreground w-[350px] md:w-[590px] xl:w-[1190px] m-1 border shadow-md",
+        className
+      )}
+    >
       <div
         style={{
           backgroundImage: `url(${image})`,

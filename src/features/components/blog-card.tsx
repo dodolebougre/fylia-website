@@ -22,7 +22,7 @@ export const BlogCard = (props: BlogCardProps) => {
     <Link href={`/blogs/${props.post.slug}`}>
       <Card
         variant={"default"}
-        className="transition-all shadow-none hover:shadow-xl min-h-[470px]"
+        className="transition-all shadow-none hover:shadow-xl xl:min-h-[470px] md:min-h-[420px]"
       >
         <CardHeader className="h-fit">
           <AspectRatio

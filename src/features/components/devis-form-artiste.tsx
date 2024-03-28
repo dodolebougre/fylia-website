@@ -23,7 +23,12 @@ import {
 import { Input } from "../../components/ui/input";
 import { LayoutPage } from "../layout/layout-page";
 
-export const DevisForm = () => {
+import type { Post } from "../../lib/posts-artiste/artiste-config";
+type ArtisteCardProps = {
+  post: Post;
+};
+
+export const DevisFormArtist = (props: ArtisteCardProps) => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const form = useForm<z.infer<typeof devisSchema>>({
@@ -59,16 +64,36 @@ export const DevisForm = () => {
   };
 
   return (
-    <LayoutPage title={"Devis sur mesure en 1 min"}>
+    <LayoutPage title={`Devis sur mesure en 1 min `}>
       <Card>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <CardContent>
               <FormField
                 control={form.control}
-                name={"name"}
+                name={"title"}
                 render={({ field }) => (
                   <FormItem className="py-5">
+                    <FormLabel className="font-roboto text-sm font-light xl:text-md">
+                      Vous avez chosit{" "}
+                      <strong>{props.post.attributes.title}</strong> . Ecrivez
+                      son nom si c'est lui que vous souhaitez{" "}
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Nom de l'artiste choisit"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name={"name"}
+                render={({ field }) => (
+                  <FormItem className="pb-5">
                     <FormLabel className="font-roboto text-sm font-light xl:text-md">
                       Votre nom <strong className="text-red-500">*</strong>
                     </FormLabel>

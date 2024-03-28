@@ -25,7 +25,8 @@ export const sendEmailFromDevisForm = async (
   tel: string,
   company: string,
   firstname: string,
-  location: string
+  location: string,
+  title: string | undefined
 ) => {
   await resend.emails.send({
     from: "Fylia <moncontact@fylia.fr>",
@@ -39,6 +40,7 @@ export const sendEmailFromDevisForm = async (
       company,
       firstname,
       location,
+      title,
     }),
   });
 };

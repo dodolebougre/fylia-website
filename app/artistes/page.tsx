@@ -27,57 +27,59 @@ export default async function ArtistesPage(props: PageParams<{}>) {
   const posts = await getPosts(activeTags);
 
   return (
-    <LayoutPage title={"Les artistes de Fylia"}>
-      <Card>
-        <CardHeader className="border pb-0 m-6 mb-0 ">
-          <CardContent>
-            {tags.map((tag) => (
-              <Link
-                className="p-1"
-                key={tag}
-                href={{
-                  pathname: "/artistes",
-                  query: {
-                    tag: tag,
-                  },
-                }}
-              >
-                <Badge
-                  variant={
-                    activeTags && activeTags.includes(tag)
-                      ? "default"
-                      : "outline"
-                  }
+    <div className="py-10">
+      <LayoutPage title={"Les artistes de Fylia"}>
+        <Card>
+          <CardHeader className="border pb-0 m-6 mb-0 ">
+            <CardContent>
+              {tags.map((tag) => (
+                <Link
+                  className="p-1"
+                  key={tag}
+                  href={{
+                    pathname: "/artistes",
+                    query: {
+                      tag: tag,
+                    },
+                  }}
                 >
-                  {tag}
-                </Badge>
-              </Link>
-            ))}
-          </CardContent>
-        </CardHeader>
-        <CardContent className="flex flex-wrap gap-2"></CardContent>
-        {posts.length === 0 ? (
-          <CardContent className="flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center rounded-lg border-2 border-dashed p-4 lg:gap-6 lg:p-8">
-              <Typography variant="h2">
-                Les artistes ne sont plus disponibles
-              </Typography>
-              <Link
-                className={buttonVariants({ variant: "link" })}
-                href="/artistes"
-              >
-                Voir tout les artistes
-              </Link>
-            </div>
-          </CardContent>
-        ) : (
-          <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:grid-cols-3">
-            {posts.map((post) => (
-              <ArtisteCard key={post.slug} post={post} />
-            ))}
-          </CardContent>
-        )}{" "}
-      </Card>
-    </LayoutPage>
+                  <Badge
+                    variant={
+                      activeTags && activeTags.includes(tag)
+                        ? "default"
+                        : "outline"
+                    }
+                  >
+                    {tag}
+                  </Badge>
+                </Link>
+              ))}
+            </CardContent>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-2"></CardContent>
+          {posts.length === 0 ? (
+            <CardContent className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center rounded-lg border-2 border-dashed p-4 lg:gap-6 lg:p-8">
+                <Typography variant="h2">
+                  Les artistes ne sont plus disponibles
+                </Typography>
+                <Link
+                  className={buttonVariants({ variant: "link" })}
+                  href="/artistes"
+                >
+                  Voir tout les artistes
+                </Link>
+              </div>
+            </CardContent>
+          ) : (
+            <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:grid-cols-3">
+              {posts.map((post) => (
+                <ArtisteCard key={post.slug} post={post} />
+              ))}
+            </CardContent>
+          )}{" "}
+        </Card>
+      </LayoutPage>
+    </div>
   );
 }

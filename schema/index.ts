@@ -22,6 +22,7 @@ export const devisSchema = z.object({
   location: z
     .string()
     .min(1, { message: "Votre localisation est obligatoire" }),
+  title: z.string().optional(),
 });
 
 export const newsSchema = z.object({

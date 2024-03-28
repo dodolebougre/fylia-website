@@ -17,6 +17,7 @@ export type Post = {
 
 export const getPosts = async (tags?: string[]) => {
   const fileNames = await fs.readdir(postsDirectory);
+
   const posts: Post[] = [];
   for await (const fileName of fileNames) {
     const fullPath = path.join(postsDirectory, fileName);

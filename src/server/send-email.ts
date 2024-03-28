@@ -32,7 +32,7 @@ export const sendDevis = async (values: z.infer<typeof devisSchema>) => {
   }
 
   if (validatedFields.success) {
-    const { email, name, message, tel, company, firstname, location } =
+    const { email, name, message, tel, company, firstname, location, title } =
       validatedFields.data;
     try {
       await sendEmailFromDevisForm(
@@ -42,7 +42,8 @@ export const sendDevis = async (values: z.infer<typeof devisSchema>) => {
         tel,
         company,
         firstname,
-        location
+        location,
+        title
       );
       return { success: "Email bien envoyé !" };
     } catch (error) {

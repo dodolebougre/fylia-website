@@ -76,101 +76,107 @@ export default async function RoutePage(props: PostParams) {
   }
 
   return (
-    <LayoutPage title={""}>
-      <Link className={buttonVariants({ variant: "link" })} href="/artistes">
-        <ArrowLeft size={16} /> Back
-      </Link>
-      <Card>
-        <CardHeader className="flex w-full flex-col gap-2 bg-blue-700 p-10 text-white backdrop-blur">
-          {post.attributes.status === "draft" ? (
-            <Badge className="w-fit" variant="secondary">
-              Brouillon
-            </Badge>
-          ) : null}
-          <div className="flex items-center justify-center flex-col">
-            <CardTitle className="drop-shadow-sm">
-              {post.attributes.title}
-            </CardTitle>
+    <div className="pb-10">
+      <LayoutPage title={""}>
+        <Link className={buttonVariants({ variant: "link" })} href="/artistes">
+          <ArrowLeft size={16} /> Back
+        </Link>
+        <Card>
+          <CardHeader className="flex w-full flex-col gap-2 bg-blue-700 p-10 text-white backdrop-blur">
+            {post.attributes.status === "draft" ? (
+              <Badge className="w-fit" variant="secondary">
+                Brouillon
+              </Badge>
+            ) : null}
+            <div className="flex items-center justify-center flex-col">
+              <CardTitle className="drop-shadow-sm">
+                {post.attributes.title}
+              </CardTitle>
 
-            <Avatar className="border">
-              {" "}
-              <AvatarImage src={post.attributes.coverUrl} alt="Valentin" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-          </div>
-        </CardHeader>
+              <Avatar className="border">
+                {" "}
+                <AvatarImage src={post.attributes.coverUrl} alt="Valentin" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </div>
+          </CardHeader>
 
-        <CardContent className="flex xl:flex-row flex-col justify-center items-center">
-          <Carousel className=" w-[250px] m-10 ">
-            <CarouselContent>
-              <CarouselItem className="flex items-center justify-center ">
-                <Card
-                  style={{
-                    backgroundImage: `url(${post.attributes.photo1})`,
-                    // center the image
-                    backgroundPosition: "center",
-                    // set the image to cover all the space
-                    backgroundSize: "cover",
-                  }}
-                  className="h-[250px] w-[250px]"
-                  variant={"default"}
-                ></Card>
-              </CarouselItem>
-              <CarouselItem className="flex items-center justify-center ">
-                <Card
-                  style={{
-                    backgroundImage: `url(${post.attributes.photo2})`,
-                    // center the image
-                    backgroundPosition: "center",
-                    // set the image to cover all the space
-                    backgroundSize: "cover",
-                  }}
-                  className="h-[250px] w-[250px]"
-                  variant={"default"}
-                ></Card>
-              </CarouselItem>
-              <CarouselItem className="flex items-center justify-center ">
-                <Card
-                  style={{
-                    backgroundImage: `url(${post.attributes.photo3})`,
-                    // center the image
-                    backgroundPosition: "center",
-                    // set the image to cover all the space
-                    backgroundSize: "cover",
-                  }}
-                  className="h-[250px] w-[250px]"
-                  variant={"default"}
-                ></Card>
-              </CarouselItem>
-              <CarouselItem className="flex items-center justify-center ">
-                <Card
-                  style={{
-                    backgroundImage: `url(${post.attributes.photo4})`,
-                    // center the image
-                    backgroundPosition: "center",
-                    // set the image to cover all the space
-                    backgroundSize: "cover",
-                  }}
-                  className="h-[250px] w-[250px]"
-                  variant={"default"}
-                ></Card>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-          <div className="p-6 m-6 border min-h-[250px]">
-            <Typography variant={"h1"} className="pb-10">
-              {" "}
-              Notre artiste {post.attributes.title} se confie 💙
-            </Typography>
-            <Markdown>{post.content}</Markdown>
-          </div>
-        </CardContent>
-        <CardFooter className="flex items-center justify-center">
-          <Button variant={"fyliaButtonBlack"}>Devis gratuit rapide ☞</Button>
-        </CardFooter>
-      </Card>
-    </LayoutPage>
+          <CardContent className="flex xl:flex-row flex-col justify-center items-center">
+            <Carousel className=" w-[250px] m-10 ">
+              <CarouselContent>
+                <CarouselItem className="flex items-center justify-center ">
+                  <Card
+                    style={{
+                      backgroundImage: `url(${post.attributes.photo1})`,
+                      // center the image
+                      backgroundPosition: "center",
+                      // set the image to cover all the space
+                      backgroundSize: "cover",
+                    }}
+                    className="h-[250px] w-[250px]"
+                    variant={"default"}
+                  ></Card>
+                </CarouselItem>
+                <CarouselItem className="flex items-center justify-center ">
+                  <Card
+                    style={{
+                      backgroundImage: `url(${post.attributes.photo2})`,
+                      // center the image
+                      backgroundPosition: "center",
+                      // set the image to cover all the space
+                      backgroundSize: "cover",
+                    }}
+                    className="h-[250px] w-[250px]"
+                    variant={"default"}
+                  ></Card>
+                </CarouselItem>
+                <CarouselItem className="flex items-center justify-center ">
+                  <Card
+                    style={{
+                      backgroundImage: `url(${post.attributes.photo3})`,
+                      // center the image
+                      backgroundPosition: "center",
+                      // set the image to cover all the space
+                      backgroundSize: "cover",
+                    }}
+                    className="h-[250px] w-[250px]"
+                    variant={"default"}
+                  ></Card>
+                </CarouselItem>
+                <CarouselItem className="flex items-center justify-center ">
+                  <Card
+                    style={{
+                      backgroundImage: `url(${post.attributes.photo4})`,
+                      // center the image
+                      backgroundPosition: "center",
+                      // set the image to cover all the space
+                      backgroundSize: "cover",
+                    }}
+                    className="h-[250px] w-[250px]"
+                    variant={"default"}
+                  ></Card>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+            <div className="p-6 m-6 border min-h-[250px]">
+              <Typography variant={"h1"} className="pb-10">
+                {" "}
+                Notre artiste {post.attributes.title} se confie 💙
+              </Typography>
+              <Markdown>{post.content}</Markdown>
+            </div>
+          </CardContent>
+          <CardFooter className="flex items-center justify-center">
+            <Link href={`/devis/${post.slug}`}>
+              <Button variant={"fyliaButtonBlue"}>
+                Devis gratuit et rapide ☞
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+      </LayoutPage>
+    </div>
   );
 }

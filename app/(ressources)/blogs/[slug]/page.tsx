@@ -69,46 +69,48 @@ export default async function RoutePage(props: PostParams) {
   }
 
   return (
-    <LayoutPage title={""}>
-      <Link className={buttonVariants({ variant: "link" })} href="/blogs">
-        <ArrowLeft size={16} /> Back
-      </Link>
-      <CardHeader
-        style={{
-          backgroundImage: `url(${post.attributes.coverUrl})`,
-          // center the image
-          backgroundPosition: "center",
-          // set the image to cover all the space
-          backgroundSize: "cover",
-        }}
-        className="overflow-hidden border shadow-sm w-full p-20"
-      >
-        <div className="flex w-full flex-col gap-2 bg-black/20 p-10 text-white backdrop-blur">
-          {post.attributes.status === "draft" ? (
-            <Badge className="w-fit" variant="secondary">
-              Brouillon
-            </Badge>
-          ) : null}
-          <CardTitle className="drop-shadow-sm">
-            {post.attributes.title}
-          </CardTitle>
-          <CardDescription className="drop-shadow-sm flex items-center justify-center gap-2">
-            Publié par {post.attributes.auteur}
-            <Avatar className="border">
-              {" "}
-              <AvatarImage src={post.attributes.imageAuteur} alt="Valentin" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-          </CardDescription>
-          <CardDescription className="drop-shadow-sm">
-            Temps de lectures {calculateReadingTime(post.content)} minutes ⏱️
-          </CardDescription>
-        </div>
-      </CardHeader>
+    <div className="pb-10">
+      <LayoutPage title={""}>
+        <Link className={buttonVariants({ variant: "link" })} href="/blogs">
+          <ArrowLeft size={16} /> Retour
+        </Link>
+        <CardHeader
+          style={{
+            backgroundImage: `url(${post.attributes.coverUrl})`,
+            // center the image
+            backgroundPosition: "center",
+            // set the image to cover all the space
+            backgroundSize: "cover",
+          }}
+          className="overflow-hidden border shadow-sm w-full p-20"
+        >
+          <div className="flex w-full flex-col gap-2 bg-black/20 p-10 text-white backdrop-blur">
+            {post.attributes.status === "draft" ? (
+              <Badge className="w-fit" variant="secondary">
+                Brouillon
+              </Badge>
+            ) : null}
+            <CardTitle className="drop-shadow-sm">
+              {post.attributes.title}
+            </CardTitle>
+            <CardDescription className="drop-shadow-sm flex items-center justify-center gap-2">
+              Publié par {post.attributes.auteur}
+              <Avatar className="border">
+                {" "}
+                <AvatarImage src={post.attributes.imageAuteur} alt="Valentin" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </CardDescription>
+            <CardDescription className="drop-shadow-sm">
+              Temps de lectures {calculateReadingTime(post.content)} minutes ⏱️
+            </CardDescription>
+          </div>
+        </CardHeader>
 
-      <CardContent className="px-40 text-left">
-        <Markdown>{post.content}</Markdown>
-      </CardContent>
-    </LayoutPage>
+        <CardContent className="px-40 text-left pb-20">
+          <Markdown>{post.content}</Markdown>
+        </CardContent>
+      </LayoutPage>
+    </div>
   );
 }

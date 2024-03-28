@@ -1,8 +1,8 @@
 "use client";
 import { Button } from "@/src/components/ui/button";
 import { Typography } from "@/src/components/ui/typography";
+import Link from "next/link";
 
-import { Link as ScrollLink } from "react-scroll";
 import Typewriter from "typewriter-effect";
 
 interface HeroPageProps {
@@ -14,7 +14,6 @@ interface HeroPageProps {
   typeWriter1: string;
   typeWriter2: string;
   typeWriter3: string;
-  hrefSwapLink: string;
 }
 
 export const Hero = ({
@@ -26,7 +25,6 @@ export const Hero = ({
   typeWriter1,
   typeWriter2,
   typeWriter3,
-  hrefSwapLink,
 }: HeroPageProps) => {
   return (
     <div
@@ -35,7 +33,7 @@ export const Hero = ({
         backgroundImage: `url("${backgroundImageHref}")`,
       }}
     >
-      <div className="flex flex-col items-center justify-center bg-black/20 text-center pt-20 pb-20 backdrop-blur  text-white mt-20 w-screen">
+      <div className="flex flex-col items-center justify-center bg-black/20 text-center pt-20 pb-20 backdrop-blur-sm  text-white mt-20 w-screen">
         {" "}
         <Typography
           style={{ textShadow: "2px 2px 5px rgba(0, 0, 0, 0.5)" }}
@@ -56,16 +54,11 @@ export const Hero = ({
         <Typography className="px-20" variant="lead2">
           {sousTitreHero}
         </Typography>
-        <ScrollLink
-          to={hrefButtonHero}
-          smooth={true}
-          duration={1000}
-          offset={-95}
-        >
+        <Link href={hrefButtonHero}>
           <Button className="m-5 p-5" variant={"fyliaButtonWhite"}>
             {buttonHero}
           </Button>
-        </ScrollLink>
+        </Link>
       </div>
     </div>
   );

@@ -6,7 +6,6 @@ import { Typography } from "@/src/components/ui/typography";
 import Link from "next/link";
 import { BsInstagram } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
-import { AlertCalendlyPage } from "../components/calendly";
 import { MobileMenu } from "./mobile-menu";
 import { NavigationMenuHeader } from "./navigation-menu";
 
@@ -36,11 +35,11 @@ export const Header = () => {
         <div className="hidden lg:block ">
           <div className="flex flex-row">
             <NavigationMenuHeader />
-            <AlertCalendlyPage>
+            <Link href={"/rendez-vous"}>
               <Button variant={"fyliaButtonBlue"} size={"default"}>
                 Contactez-nous !
               </Button>
-            </AlertCalendlyPage>
+            </Link>
           </div>
         </div>
       </div>

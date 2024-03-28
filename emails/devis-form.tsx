@@ -19,6 +19,7 @@ interface DevisFormProps {
   company?: string;
   firstname?: string;
   location?: string;
+  title?: string;
 }
 
 const baseUrl = process.env.VERCEL_URL
@@ -33,6 +34,7 @@ export const DevisForm = ({
   company,
   firstname,
   location,
+  title,
 }: DevisFormProps) => (
   <Tailwind
     config={{
@@ -55,6 +57,9 @@ export const DevisForm = ({
           </Heading>
           <Section className="mt-6">
             <Text className="text-lg leading-8 font-light">
+              Voici l'artiste choisit : {title}
+            </Text>
+            <Text className="text-lg leading-8 font-light">
               Voici son email : {email}
             </Text>
             <Text className="text-lg leading-8 font-light">
@@ -64,12 +69,13 @@ export const DevisForm = ({
               Voici le nom de la société : {company}
             </Text>
             <Text className="text-lg leading-8 font-light">
-              Voici sa localisation : {company}
+              Voici sa localisation : {location}
             </Text>
           </Section>
           <Text className="text-sm leading-8">
             Voici son message : {message}
           </Text>
+
           <Hr className="border-t border-gray-300 mt-12" />
           <Text className="text-sm text-gray-600 mt-2">Fylia company.</Text>
           <Text className="text-sm text-gray-600">

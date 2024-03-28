@@ -10,7 +10,7 @@ import { Newsletter } from "../components/newsletter";
 
 const Footer = () => {
   return (
-    <footer className="p-10 mt-10 flex flex-col shadow-[35px_35px_35px_35px_rgba(0,0,0,0.3)]">
+    <footer className="p-10  flex flex-col shadow-[35px_35px_35px_35px_rgba(0,0,0,0.3)]">
       <section className="flex xl:flex-row flex-col lg:justify-between">
         <div className="flex flex-col items-center m-3 ">
           <FyliaName />
@@ -71,7 +71,7 @@ const Footer = () => {
                 Les blogs de fylia
               </Typography>
             </Link>
-            <Link href="/histoire">
+            <Link href="/equipe">
               <Typography
                 variant={"small"}
                 className="hover:underline transition duration-700 ease-in-out"

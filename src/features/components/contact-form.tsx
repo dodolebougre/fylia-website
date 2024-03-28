@@ -92,7 +92,7 @@ export const ContactForm = () => {
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem className="mt-4">
+                <FormItem className="py-5">
                   <FormLabel className="font-roboto text-sm font-light xl:text-md">
                     Votre email<strong className="text-red-500">*</strong>
                   </FormLabel>
@@ -107,7 +107,7 @@ export const ContactForm = () => {
               control={form.control}
               name="tel"
               render={({ field }) => (
-                <FormItem className="mt-4">
+                <FormItem className="pb-5">
                   <FormLabel className="font-roboto text-sm font-light xl:text-md">
                     Votre numéro de téléphone
                     <strong className="text-red-500">*</strong>
@@ -123,7 +123,7 @@ export const ContactForm = () => {
               control={form.control}
               name={"location"}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="pb-5">
                   <FormLabel className="font-roboto text-sm font-light xl:text-md">
                     Votre localisation{" "}
                     <strong className="text-red-500">*</strong>
@@ -139,7 +139,7 @@ export const ContactForm = () => {
               control={form.control}
               name="message"
               render={({ field }) => (
-                <FormItem className="mt-4">
+                <FormItem>
                   <FormLabel className="font-roboto text-sm font-light xl:text-md">
                     Message<strong className="text-red-500">*</strong>{" "}
                     (profession et motivation)

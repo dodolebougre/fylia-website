@@ -21,7 +21,7 @@ export const ArtisteCard = (props: ArtisteCardProps) => {
     <Link href={`/artistes/${props.post.slug}`}>
       <Card
         variant={"default"}
-        className="transition-all shadow-none hover:shadow-xl  min-h-[450px]"
+        className="transition-all shadow-none hover:shadow-xl  xl:min-h-[400px] md:min-h-[380px]"
       >
         <CardHeader className="h-fit">
           <AspectRatio
@@ -46,7 +46,7 @@ export const ArtisteCard = (props: ArtisteCardProps) => {
           </Typography>
         </CardContent>
         <CardFooter className="flex flex-col gap-2 items-center justify-center">
-          <Typography className=" italic" variant={"p"}>
+          <Typography variant={"small"}>
             {" "}
             {props.post.attributes.price}
           </Typography>

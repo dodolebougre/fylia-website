@@ -2,15 +2,15 @@ import { Button } from "@/src/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/src/components/ui/card";
 import { Typography } from "@/src/components/ui/typography";
 import { AccordionForm } from "@/src/features/components/accordion";
-import { AlertCalendlyPage } from "@/src/features/components/calendly";
 import { SimpleImage } from "@/src/features/components/simple-image";
 import { StoryCompText } from "@/src/features/components/story-comp-text";
 import { LayoutCardItem } from "@/src/features/layout/layout-card-item";
 import { LayoutPage } from "@/src/features/layout/layout-page";
+import Link from "next/link";
 
 const EquipePage = () => {
   return (
-    <>
+    <div className="py-10">
       <LayoutPage title={"Notre équipe"}>
         <LayoutCardItem className={"border-t-0"}>
           <StoryCompText
@@ -68,11 +68,11 @@ const EquipePage = () => {
               </Typography>{" "}
             </CardContent>
             <CardFooter className="flex items-center justify-center">
-              <AlertCalendlyPage>
+              <Link href="/rendez-vous">
                 <Button variant="fyliaButtonBlue">
                   Je souhaite prendre un rendez vous !
                 </Button>
-              </AlertCalendlyPage>
+              </Link>
             </CardFooter>
           </Card>
           <AccordionForm
@@ -99,7 +99,7 @@ const EquipePage = () => {
           />
         </LayoutCardItem>
       </LayoutPage>
-    </>
+    </div>
   );
 };
 
