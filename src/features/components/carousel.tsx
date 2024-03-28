@@ -13,7 +13,7 @@ interface CarouselCardProps {
 export function CarouselCard({ children }: CarouselCardProps) {
   return (
     <Card className="flex items-center justify-center">
-      <Carousel className="w-full max-w-5xl">
+      <Carousel className="xl:w-[890px] md:w-[490px] w-[250px] max-w-5xl">
         <CarouselContent>{children}</CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
