@@ -13,6 +13,7 @@ interface StoryCompTextProps {
   title: string;
   title2: string;
   paragraphe: string;
+  icon: React.ReactNode;
 }
 
 export const StoryCompText = ({
@@ -20,10 +21,12 @@ export const StoryCompText = ({
   title2,
   paragraphe,
   className,
+  icon,
 }: StoryCompTextProps) => {
   return (
     <Card className={cn("flex flex-col text-center  ", className)}>
-      <CardHeader>
+      <CardHeader className="flex flex-col items-center xl:items-stretch ">
+        {icon}
         <CardTitle>{title}</CardTitle>
         <Typography variant={"small"} className="text-[#003dda] font-medium">
           {title2}

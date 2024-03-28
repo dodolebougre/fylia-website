@@ -7,6 +7,7 @@ import { StoryCompText } from "@/src/features/components/story-comp-text";
 import { LayoutCardItem } from "@/src/features/layout/layout-card-item";
 import { LayoutPage } from "@/src/features/layout/layout-page";
 import Link from "next/link";
+import { PiGearThin, PiHeartThin, PiPencilThin } from "react-icons/pi";
 
 const EquipePage = () => {
   return (
@@ -17,9 +18,12 @@ const EquipePage = () => {
             className="flex xl:items-start xl:text-start text-center items-center"
             title={"Luc"}
             paragraphe={
-              "Alliant ses passions pour l’art et l’entrepreneuriat, Luc est le visionnaire derrière l’idée de fylia.❃"
+              "Alliant ses passions pour l’art et l’entrepreneuriat, Luc à toujours voulu être indépendant et créer son propre univers. Il est le visionnaire derrière l’idée de Fylia ❃"
             }
             title2={"Commercial"}
+            icon={
+              <PiPencilThin className="text-4xl hover:scale-105 transition duration-700 ease-in-out" />
+            }
           />
           <SimpleImage
             image={"/image/pp-luc.png"}
@@ -37,9 +41,12 @@ const EquipePage = () => {
             className=" flex xl:items-end xl:text-end text-center items-center"
             title={"Dorian"}
             paragraphe={
-              "Ingénieur dans le bâtiment de formation, Dorian est la force technique derrière Fylia, assurant fiabilité et sérénité. ❃"
+              "Ingénieur dans le bâtiment de formation, Dorian s'est très vite passionée pour le developpement web. Aujourd'hui il est la force technique derrière Fylia, assurant fiabilité et sérénité ❃"
             }
             title2={"Technique"}
+            icon={
+              <PiGearThin className="text-4xl hover:scale-105 transition duration-700 ease-in-out xl:ml-[100px]" />
+            }
           />
         </LayoutCardItem>
         <LayoutCardItem className={"border-t-0 border-b-0"}>
@@ -47,9 +54,12 @@ const EquipePage = () => {
             className="flex xl:items-start xl:text-start text-center items-center"
             title={"Valentin"}
             paragraphe={
-              "Inspiré par son amour pour le vivre ensemble, Valentin accorde une importance toute particulière à la notion de “bien être” ❃"
+              "Inspiré par son amour pour le vivre ensemble, Valentin accorde une importance toute particulière à la notion de “bien être”, et “d'engagement”. Il veut oeuvrer pour la cause des artistes et celle des salariés ❃"
             }
             title2={"Marketing et communication"}
+            icon={
+              <PiHeartThin className="text-4xl hover:scale-105 transition duration-700 ease-in-out " />
+            }
           />
           <SimpleImage
             image={"image/pp-valentin.png"}
