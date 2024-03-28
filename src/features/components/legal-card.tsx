@@ -12,7 +12,7 @@ export const LegalCard = (props: LegalCardProps) => {
       variant={"default"}
       className="transition-all shadow-none min-h-[450px]"
     >
-      <CardContent className="space-y-2">
+      <CardContent className="space-y-2 text-left">
         <Markdown>{props.post.content}</Markdown>
       </CardContent>
     </Card>

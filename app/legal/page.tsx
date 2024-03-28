@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { Badge } from "@/src/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/src/components/ui/card";
 import { LegalCard } from "@/src/features/components/legal-card";
 import { LayoutPage } from "@/src/features/layout/layout-page";
 import { getPosts, getPostsTags } from "@/src/lib/posts-legal/legal-config";
+import Link from "next/link";
 
 import { PageParams } from "@/src/types/next";
 const getTags = (
@@ -52,7 +52,7 @@ export default async function LegalsPage(props: PageParams<{}>) {
             ))}
           </CardContent>
         </CardHeader>
-        <CardContent className="flex flex-wrap gap-2"></CardContent>
+        <CardContent className="flex flex-wrap gap-2 "></CardContent>
 
         <CardContent className="">
           {posts.map((post) => (
