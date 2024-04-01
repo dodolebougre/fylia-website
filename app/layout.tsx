@@ -1,6 +1,7 @@
 import { Header } from "@/src/features/header/header";
 import { cn } from "@/src/lib/utils";
 import { SiteConfig } from "@/src/site-config";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Philosopher, Roboto } from "next/font/google";
 import localFont from "next/font/local";
@@ -41,7 +42,8 @@ export default function RootLayout({
         className={cn(roboto.variable, philosopher.variable, athena.variable)}
       >
         <Header />
-        <div className="">{children}</div>
+        <div>{children}</div>
+        <Analytics />
         <Footer />
       </body>
     </html>
