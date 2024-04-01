@@ -95,7 +95,7 @@ export default async function RoutePage(props: PostParams) {
 
               <Avatar className="border">
                 {" "}
-                <AvatarImage src={post.attributes.coverUrl} alt="Valentin" />
+                <AvatarImage src={post.attributes.photo1} alt="Valentin" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             </div>

@@ -117,7 +117,7 @@ const ServiceTeamBuildingPage = () => {
                 Les coachs plasticiens sont là pour offrir des conseils et une
                 orientation artistique tout au long du processus.{" "}
                 <strong>
-                  Leurs expertises aide les équipes à se dépasser{" "}
+                  Leurs expertises aident les équipes à se dépasser{" "}
                 </strong>{" "}
                 et à prendre confiance !
               </Typography>

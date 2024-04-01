@@ -29,7 +29,7 @@ export const ArtisteCard = (props: ArtisteCardProps) => {
             className="overflow-hidden border shadow-md"
           >
             <Img
-              src={props.post.attributes.coverUrl}
+              src={props.post.attributes.photo1}
               alt={props.post.attributes.title}
               className="size-full object-cover"
             />

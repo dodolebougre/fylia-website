@@ -155,8 +155,8 @@ export default function HomePage() {
             title={"Des fresques sur-mesure"}
             title2={"Une prestation personnalisable !"}
             list1={"Embelissez vos espaces de travail ✓"}
-            list2={"Engagé vos collaborateurs ✓"}
-            list3={"Créer un moment inoubliable ✓"}
+            list2={"Engagez vos collaborateurs ✓"}
+            list3={"Créez un moment inoubliable ✓"}
             buttonText={"En savoir plus ☞"}
             buttonHref={"/fresque"}
           />
@@ -168,7 +168,7 @@ export default function HomePage() {
             title2={" Faites participer vos employés !"}
             list1={"Fédérez vos employés autour d'un atelier artistique ✓"}
             list2={"Proposez un moyen de partage novateur et engagé ✓"}
-            list3={"Mener à bien un projet qui à du sens ✓"}
+            list3={"Menez à bien un projet qui à du sens ✓"}
             buttonText={"En savoir plus ☞"}
             buttonHref={"/team-building"}
           />
