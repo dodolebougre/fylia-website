@@ -46,7 +46,7 @@ export const ArtisteCard = (props: ArtisteCardProps) => {
           </Typography>
         </CardContent>
         <CardFooter className="flex flex-col gap-2 items-center justify-center">
-          <Typography variant={"small"}>
+          <Typography variant={"muted"}>
             {" "}
             {props.post.attributes.price}
           </Typography>

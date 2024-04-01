@@ -102,7 +102,7 @@ const ServiceTeamBuildingPage = () => {
             text={
               <Typography variant={"p"}>
                 Faire jaillir dans{" "}
-                <strong>l’équipe les idées les plus innovantes selon</strong>
+                <strong>l’équipe les idées les plus innovantes selon </strong>
                 un thème déterminé : « cohésion au travail, rôle du manager,
                 bien-être au travail ! »
               </Typography>
@@ -117,7 +117,7 @@ const ServiceTeamBuildingPage = () => {
                 Les coachs plasticiens sont là pour offrir des conseils et une
                 orientation artistique tout au long du processus.{" "}
                 <strong>
-                  Leur expertise aide les équipes à se dépasser{" "}
+                  Leurs expertises aide les équipes à se dépasser{" "}
                 </strong>{" "}
                 et à prendre confiance !
               </Typography>
@@ -136,7 +136,7 @@ const ServiceTeamBuildingPage = () => {
                 <strong>
                   chaque équipe présente son œuvre, partageant son thème et son
                   interprétation
-                </strong>
+                </strong>{" "}
                 avec les autres participants.
               </Typography>
             }
@@ -183,7 +183,7 @@ const ServiceTeamBuildingPage = () => {
               "On vous présente l'artiste parfait en fonction de vos réponses 🤩"
             }
             list3={
-              "On fixe le jour J et l'artiste parfait pour vous, ainsi qu'un thème vous tenant à coeur ♥️"
+              "On fixe le jour J, un artiste parfait pour vous, ainsi qu'un thème vous tenant à coeur ♥️"
             }
             buttonText={"Devis gratuit et rapide ☞"}
             buttonHref={"/devis"}
@@ -247,7 +247,7 @@ const ServiceTeamBuildingPage = () => {
             reponse1={"A ce jour, uniquement à Marseille et ses alentours !"}
             question2={"Quel est le prix d'un team building ?"}
             reponse2={
-              "Nous pouvons compter à partir de 60 euros par personnes. Le prix varie en fonction du nombre de toile et du temps de prestation"
+              "Nous pouvons compter à partir de 60 euros par personnes. Le prix varie en fonction du nombre de toile et du temps de prestation."
             }
             question3={"Combien de temps pour un team-building?"}
             reponse3={
@@ -259,7 +259,7 @@ const ServiceTeamBuildingPage = () => {
             }
             question5={"Ou se déroule le team building ?"}
             reponse5={
-              "Qu'il s'agisse de votre entreprise, d'un parc ou d’un atelier d’artiste, nous saurons dénicher pour vous un lieu propice à la créativité "
+              "Qu'il s'agisse de votre entreprise, d'un parc ou d’un atelier d’artiste, nous saurons dénicher pour vous un lieu propice à la créativité. "
             }
           />
         </LayoutCardItem>

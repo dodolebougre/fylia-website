@@ -37,7 +37,7 @@ const ServiceOeuvrePage = () => {
             title={"Pourquoi une peinture sur-mesure ?"}
             title2={"A vos marques !"}
             list1={"Exposer le style d’un artiste local ❤️‍🔥"}
-            list2={"Embellir les espaces de travail "}
+            list2={"Embellir les espaces de travail 🖼️"}
             list3={"Apporter de la créativité au bureau ⌇"}
             buttonText={"Découvrez nos artistes ☞"}
             buttonHref={"/artistes?tag=Peinture"}

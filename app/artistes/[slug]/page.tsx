@@ -156,6 +156,19 @@ export default async function RoutePage(props: PostParams) {
                     variant={"default"}
                   ></Card>
                 </CarouselItem>
+                <CarouselItem className="flex items-center justify-center ">
+                  <Card
+                    style={{
+                      backgroundImage: `url(${post.attributes.photo5})`,
+                      // center the image
+                      backgroundPosition: "center",
+                      // set the image to cover all the space
+                      backgroundSize: "cover",
+                    }}
+                    className="h-[250px] w-[250px]"
+                    variant={"default"}
+                  ></Card>
+                </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
