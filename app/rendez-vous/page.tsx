@@ -8,7 +8,7 @@ const RendezVousPage = () => {
     <div className="m-20 flex flex-col">
       <Typography variant={"h2"} className="text-center mt-20 mb-5">
         {" "}
-        Vous pouvez aussi nous appeler au 0628979548, un membre de l'équipe
+        Vous pouvez aussi nous appeler au 06.62.46.54.22, un membre de l'équipe
         prendra en main votre projet.
       </Typography>
       <InlineWidget url="https://calendly.com/luc-malfatti/30min?back=1&month=2024-01" />

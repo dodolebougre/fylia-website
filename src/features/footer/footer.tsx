@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="flex items-center justify-center xl:justify-start">
               <BsTelephone />
               <Typography variant={"small"} className="ml-2">
-                0628979548
+                06.62.46.54.22
               </Typography>
             </div>
           </div>
