@@ -18,7 +18,7 @@ const EquipePage = () => {
             className="flex xl:items-start xl:text-start text-center items-center"
             title={"Luc"}
             paragraphe={
-              "Alliant ses passions pour l’art et l’entrepreneuriat, Luc à toujours voulu être indépendant et créer son propre univers. Il est le visionnaire derrière l’idée de Fylia ❃"
+              "Alliant ses passions pour l’art et l’entrepreneuriat, Luc a toujours voulu être indépendant et créer son propre univers. Il est le visionnaire derrière l’idée de Fylia ❃"
             }
             title2={"Commercial"}
             icon={
@@ -41,7 +41,7 @@ const EquipePage = () => {
             className=" flex xl:items-end xl:text-end text-center items-center"
             title={"Dorian"}
             paragraphe={
-              "Ingénieur dans le bâtiment de formation, Dorian s'est très vite passionée pour le developpement web. Aujourd'hui il est la force technique derrière Fylia, assurant fiabilité et sérénité ❃"
+              "Ingénieur dans le bâtiment de formation, Dorian s'est très vite passioné pour le developpement web. Aujourd'hui il est la force technique derrière Fylia, assurant fiabilité et sérénité ❃"
             }
             title2={"Technique"}
             icon={
