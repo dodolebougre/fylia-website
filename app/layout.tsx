@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/next-script-for-ga */
 import { Header } from "@/src/features/header/header";
 import { cn } from "@/src/lib/utils";
 import { SiteConfig } from "@/src/site-config";
@@ -7,6 +8,7 @@ import { Philosopher, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 import Footer from "../src/features/footer/footer";
 import "./globals.css";
+import Head from "next/head";
 
 const roboto = Roboto({
   style: "normal",
@@ -38,6 +40,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
+      <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-QZED8XL0SS"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-QZED8XL0SS');
+            `,
+          }}
+        />
+      </Head>
       <body
         className={cn(roboto.variable, philosopher.variable, athena.variable)}
       >
